@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Outfit";
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100dvh;
+    background-color: #323239;
+    padding: 20px 100px;
+    overflow: hidden;
+}
+
+/* DESIGN FOR HEADER */
+.container header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+/* DESIGN FOR HEADER - LOGO */
+.container header .logo-con {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    animation: showFromTop 1s ease-out 1;
+}
+@keyframes showFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+/* DESIGN FOR HEADER - LOGO - IMAGE */
+.container header .logo-con img {
+    height: 70%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+/* DESIGN FOR HEADER - LOGO - NAME */
+.container header .logo-con p {
+    font-size: 25px;
+    font-weight: 800;
+    color: #F1C973;
+}
+.container header .logo-con p::first-letter {
+    font-size: 35px;
+}
+
+/* DESIGN FOR SECTION - HOME SEC */
+.container .home-sec {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 7cap;
+    grid-template-areas: 
+    "img txt"
+    "soc soc"
+    ;
+    column-gap: 30px;
+}
+
+/* DESIGN FOR SECTION - HOME SEC - IMAGE CON */
+.container .home-sec .image-con {
+    grid-area: img;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.container .home-sec .image-con img {
+    border-radius: 50%;
+    height: 60%;
+    animation: fadeInFromLeft 1s 1 ease-out;
+}
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+/* DESIGN FOR SECTION - HOME SEC - TEXT CON */
+.container .home-sec .text-con {
+    grid-area: txt;
+    display: flex;
+    justify-content: start;    
+    align-items: center;
+}
+.container .home-sec .text-con .text {
+    height: fit-content;
+    border-left: 3px solid #A9A9A9;
+    padding: 20px 20px;
+}
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+/* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 1 */
+.container .home-sec .text-con .text p:nth-child(1) {
+    color: #A9A9A9;
+    font-size: 40px;
+    font-weight: bold;
+    animation: fadeInFromRight 1s ease-out 1;
+}
+.container .home-sec .text-con .text p:nth-child(1)>span {
+    color: #F1C973;
+}
+
+/* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 2 */
+.container .home-sec .text-con .text>p:nth-child(2) {
+    font-size: 40px;
+    color: #A9A9A9;
+    font-weight: bold;
+    animation: fadeInFromRight 1.3s ease-out 1;
+}
+.container .home-sec .text-con .text p:nth-child(2):after {
+    content: "Web Developer";
+    color: #F1C973;
+    animation: type 20s infinite 4s;
+}
+
+@keyframes type {
+    0% {
+        content: "Web Developer";
+    }
+    7% {
+        content: "We Developer";
+    }
+    14% {
+        content: "W Developer";
+    }
+    21% {
+        content: " Developer";
+    }
+    28% {
+        content: "A Developer";
+    }
+    35% {
+        content: "Ap Developer";
+    }
+    42% {
+        content: "App Developer";
+    }
+    49% {
+        content: "Ap Developer";
+    }
+    56% {
+        content: "A Developer";
+    }
+    63% {
+        content: " Developer";
+    }
+    70% {
+        content: "W Developer";
+    }
+    77% {
+        content: "We Developer";
+    }
+    84% {
+        content: "Web Developer";
+    }
+    91% {
+        content: "Web Developer";
+    }
+    100% {
+        content: "Web Developer";
+    }
+}
+
+/* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 3 */
+.container .home-sec .text-con .text p:nth-child(3) {
+    color: #A9A9A9;
+    margin-top: 10px;
+    animation: fadeInFromRight 1.5s ease-out 1;
+
+}
+
+/* DESIGN FOR SECTION - HOME SEC - TEXT CON - BUTTON */
+.container .home-sec .text-con .text button {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    border: none;
+    background-color: white;
+    animation: fadeInFromRight 1.7s ease-out 1;
+}
+.container .home-sec .text-con .text button:active {
+    transform: scale(0.95);
+    transition-duration: 0.1s;
+}
+.container .home-sec .text-con .text button i {
+    color: black;
+    font-size: 20px;
+}
+.container .home-sec .text-con .text button .btn-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+/* DESIGN FOR SECTION - HOME SEC - SOC MED LINKS CON */
+.container .home-sec .socials-con {
+    width: 100%;
+    height: 100%;
+    grid-area: soc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: showFromBottom 1s ease-out 1;
+}
+@keyframes showFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+.container .home-sec .socials-con .soc-med-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.container .home-sec .socials-con .soc-med-link a {
+    text-decoration: none;
+}
+.container .home-sec .socials-con .soc-med-link a i {
+    color: #A9A9A9;
+    font-size: 30px;
+}
+
+/* DESIGN FOR SECTION - HOME SEC - SOC MED LINKS CON */
+.container .home-sec .socials-con .tech-stack img {
+    height: 100px;
+}
+
+/* DESIGN FOR SECTION - PROJECT SEC */
+.container .project-sec {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 10% 90%;
+    row-gap: 10px;
+    position: sticky;
+    top: 0;
+}
+
+/* DESIGN FOR SECTION - PROJECT SEC - HEADER */
+.container .project-sec header {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    animation: showFromBottom 1s ease-out 1;
+}
+.container .project-sec header button {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #F1C973;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    border: none;
+}
+.container .project-sec header button:active {
+    transform: scale(0.98);
+    transition-duration: 0.1s;
+}
+
+/* DESIGN FOR SECTION - PROJECT SEC - PROJECT CONTAINER */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container .project-sec .project-con {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* DESIGN FOR SECTION - PROJECT SEC - PROJECT CONTAINER - SEPERATE CONTAINER */
+.container .project-sec .project-con .proj-list-con {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+/* DESIGN FOR SECTION - PROJECT SEC - PROJECT CONTAINER - PROJECT BOX */
+.container .project-sec .project-con .proj-list-con .projectBox {
+    height: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #F1C973;
+    animation: showFromBottom 1.2s ease-out 1;
+}

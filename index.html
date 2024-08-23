@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- DESKTOP VIEW CSS LINK -->
+    <link rel="stylesheet" href="CSS FOLDER/desktop.css">
+
+    <!-- TABLET VIEW CSS LINK -->
+    <link rel="stylesheet" href="CSS FOLDER/tablet.css">
+
+    <!-- MOBILE VIEW CSS LINK -->
+    <link rel="stylesheet" href="CSS FOLDER/mobile.css">
+    <title>Renzo's Portfolio</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-con" id="homeBtn">
+                <img src="IMAGE/profilepic.jfif" alt="">
+                <p>R.Dev</p>
+            </div>
+        </header>
+
+        <div class="home-sec" id="home-sec">
+            <div class="image-con">
+                <img src="IMAGE/renzo2.png" alt="">
+            </div>
+
+            <div class="text-con">
+                <div class="text">
+                    <p>Hello!, Im <span>Renzo</span></p>
+                    <p>A freelance </p>
+                    <p>I'm a freelance full-stack web and app developer with a passion for creating seamless and efficient digital experiences. I specialize in both front-end and back-end development, delivering custom solutions that meet my clients' unique needs.</p>
+                    <button>
+                        <div class="btn-text" id="project-btn">My Projects</div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="socials-con">
+                <div class="tech-stack">
+                    <img src="IMAGE/tech-group2.png" alt="">
+                </div>
+                <div class="soc-med-link">
+                    <a href="https://www.facebook.com/renzo.tolentino.56">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/renzo_dagreat/">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@eoddjkejdxj?_t=8p6MhIlJnUe&_r=1">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tolentino-renzo-4b526b30a/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-sec" id="project-sec" style="display: none;">
+            <header>
+                <button id="f-stack-btn" onclick="showfstackCon()">Full Stack Projects</button>
+                <button id="f-end-btn" onclick="showfEndCon()">Front End Projects</button>
+                <button id="a-dev-btn" onclick="showaDevCon()">App/Mobile Projects</button>
+            </header>
+
+            <div class="project-con">
+                
+                <div class="proj-list-con" id="full-stack-con" style="display: grid;">
+                    <div class="projectBox" id="A-dev">A Project 1</div>
+                </div>
+
+                <div class="proj-list-con" id="front-end-con" style="display: none;">
+                    <div class="projectBox" id="A-dev">B Project 1</div>
+                </div>
+
+                <div class="proj-list-con" id="app-dev-con" style="display: none;">
+                    <div class="projectBox" id="A-dev">C Project 1</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Outfit";
+    box-sizing: border-box;
+}
+
+/* MOBILE VIEW (425px PORRAIT) */
+@media screen and (max-width: 425px) {
+    .container {
+        width: 100%;
+        height: 100dvh;
+        background-color: #323239;
+        padding: 20px 30px;
+        overflow: hidden;
+    }   
+    
+    /* DESIGN FOR HEADER */
+    .container header {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+    }  
+
+    /* DESIGN FOR HEADER - LOGO - IMAGE */
+    .container header .logo-con img {
+        height: 60%;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+
+    /* DESIGN FOR HEADER - LOGO - NAME */
+    .container header .logo-con p {
+        font-size: 20px;
+        font-weight: 800;
+        color: #F1C973;
+    }
+    .container header .logo-con p::first-letter {
+        font-size: 30px;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC */
+    .container .home-sec {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 30% 60% 10%;
+        grid-template-areas: 
+        "img img"
+        "txt txt"
+        "soc soc"
+        ;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - IMAGE CON */
+    .container .home-sec .image-con {
+        grid-area: img;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+    }
+    .container .home-sec .image-con img {
+        border-radius: 50%;
+        height: 90%;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - TEXT CON */
+    .container .home-sec .text-con .text {
+        height: fit-content;
+        border: none;
+        padding: 20px 20px;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 1 */
+    .container .home-sec .text-con .text p:nth-child(1) {
+        color: #A9A9A9;
+        font-size: 25px;
+        font-weight: bold;
+        animation: fadeInFromRight 1s ease-out 1;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 2 */
+    .container .home-sec .text-con .text>p:nth-child(2) {
+        font-size: 25px;
+        color: #A9A9A9;
+        font-weight: bold;
+        animation: fadeInFromRight 1.3s ease-out 1;
+    }
+    .container .home-sec .text-con .text p:nth-child(2):after {
+        content: "Web Developer";
+        color: #F1C973;
+        animation: type 20s infinite 4s;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - TEXT CON - TEXT 3 */
+    .container .home-sec .text-con .text p:nth-child(3) {
+        color: #A9A9A9;
+        margin-top: 10px;
+        animation: fadeInFromRight 1.5s ease-out 1;
+        font-size: 15px;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - TEXT CON - BUTTON */
+    .container .home-sec .text-con .text button i {
+        color: black;
+        font-size: 16px;
+    }
+    .container .home-sec .text-con .text button .btn-text {
+        font-size: 15px;
+        font-weight: 700;
+        color: black;
+    }
+
+    /* DESIGN FOR SECTION - HOME SEC - SOC MED LINKS CON */
+    .container .home-sec .socials-con .soc-med-link {
+        gap: 10px;
+    }
+    .container .home-sec .socials-con .soc-med-link a i {
+        color: #A9A9A9;
+        font-size: 20px;
+    }
+
+    /* DESIGN FOR SECTION - PROJECT SEC - HEADER */
+    .container .project-sec header button {
+        font-size: 15px;
+    }
+
+    /* DESIGN FOR SECTION - PROJECT SEC - PROJECT CONTAINER - PROJECT BOX */
+    .container .project-sec .project-con .proj-list-con .projectBox {
+        height: 300px;
+    }
+}
+
+/* MOBILE VIEW (375px PORTRAIT) */
+@media screen and (max-width: 375px) {
+    /* DESIGN FOR SECTION - HOME SEC - SOC MED LINKS CON */
+    .container .home-sec .socials-con .tech-stack img {
+        height: 35px;
+    }
+} 
+
+/* MOBILE VIEW (320px PORTRAIT) */
+@media screen and (max-width: 320px) {
+    /* DESIGN FOR SECTION - PROJECT SEC - HEADER */
+    .container .project-sec header button {
+        font-size: 13px;
+    }
+
+    /* DESIGN FOR SECTION - PROJECT SEC - PROJECT CONTAINER - PROJECT BOX */
+    .container .project-sec .project-con .proj-list-con .projectBox {
+        height: 200px;
+    }
+} 
